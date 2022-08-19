@@ -1,0 +1,132 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled20.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOlJJoNCA9BzYgoU5g4OwGe",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/karkaushik/tech_class_assignments/blob/main/dictionary_list\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iTrm1eJt-Fxe",
+        "outputId": "44c48066-5e89-4a94-a3fc-7e8731b420e8"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "enter a sentence =hello how are you? how are the potatoes?\n"
+          ]
+        }
+      ],
+      "source": [
+        "string=input(\"enter a sentence =\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "g=string.split()\n",
+        "g"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "C-kuNLFQ-SCe",
+        "outputId": "ea1531a9-bc00-4824-8ff9-4d7af960872b"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['hello', 'how', 'are', 'you?', 'how', 'are', 'the', 'potatoes?']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "total_words = [g.count(i) for i in g]\n",
+        "total_words"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "M4TVoakM-iut",
+        "outputId": "f5ae2fbf-42d5-4eee-ae72-756e6874ab8b"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 2, 2, 1, 2, 2, 1, 1]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dict_output = dict(zip(g, total_words))\n",
+        "print(\"Dictionary of word count  :  \", dict_output)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "efJbTcSp-yI2",
+        "outputId": "801509d0-55c9-4e89-9b23-59e7a6c7bf15"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Dictionary of word count  :   {'hello': 1, 'how': 2, 'are': 2, 'you?': 1, 'the': 1, 'potatoes?': 1}\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
